@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DeepPulse — 웹사이트 · 대시보드 · 크롤러 의뢰</title>
+<meta name="description" content="DeepPulse · 15년차 DevOps 엔지니어가 직접 진행하는 웹사이트 구축, 기업용 관리 대시보드, 웹 크롤러 개발 의뢰." />
+<meta property="og:title" content="DeepPulse — 의뢰 안내" />
+<meta property="og:description" content="기획·개발·배포·운영까지 한 사람이 책임지는 개발 의뢰." />
+<meta property="og:type" content="website" />
+<style>
+  :root{
+    --bg:#0b0d12; --fg:#e7ecf3; --muted:#8a93a6; --soft:#cfd5e1;
+    --accent:#5ee0c1; --accent2:#7aa2ff;
+    --card:#12161f; --line:#1e2430;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Segoe UI",sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent2)}
+  .wrap{max-width:780px;margin:0 auto;padding:64px 24px 80px}
+  .brand{font-size:13px;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;margin-bottom:14px}
+  h1{font-size:36px;line-height:1.22;margin:0 0 14px;letter-spacing:-.01em}
+  h1 b{color:var(--accent);font-weight:700}
+  h2{font-size:20px;margin:40px 0 14px;letter-spacing:-.005em}
+  .lede{color:var(--muted);font-size:17px;margin:0 0 36px}
+
+  .grid{display:grid;grid-template-columns:1fr;gap:14px}
+  @media (min-width:680px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{margin:0 0 8px;font-size:17px}
+  .card p{margin:0;color:var(--soft);font-size:14.5px}
+  .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .chip{font-size:12px;color:var(--muted);background:#0c1019;border:1px solid var(--line);
+    padding:4px 9px;border-radius:999px}
+
+  .why ul{margin:0;padding-left:20px}
+  .why li{margin:8px 0;color:var(--soft)}
+  .why li b{color:var(--fg)}
+
+  table.process{width:100%;border-collapse:collapse;margin-top:8px}
+  table.process td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14.5px;color:var(--soft)}
+  table.process td:first-child{color:var(--accent);width:90px;font-weight:600;letter-spacing:.04em}
+  table.process tr:last-child td{border-bottom:0}
+
+  .price{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
+  @media (min-width:680px){.price{grid-template-columns:repeat(3,1fr)}}
+  .price .card .amt{font-size:22px;font-weight:700;margin:6px 0 10px;color:var(--fg)}
+  .price .card .amt span{font-size:13px;color:var(--muted);font-weight:500}
+  .price .card ul{margin:0;padding-left:18px;color:var(--soft);font-size:14px}
+  .price .card li{margin:4px 0}
+
+  .cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
+  .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px}
+  .btn-primary{background:var(--accent);color:#082018}
+  .btn-ghost{border:1px solid var(--line);color:var(--fg)}
+  .small{color:var(--muted);font-size:13px;margin-top:18px}
+
+  .biz{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-top:18px}
+  .biz dl{display:grid;grid-template-columns:120px 1fr;gap:6px 16px;margin:0;font-size:14px}
+  .biz dt{color:var(--muted)}
+  .biz dd{margin:0;color:var(--soft)}
+
+  hr{border:0;border-top:1px solid var(--line);margin:36px 0}
+
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+  .faq summary{cursor:pointer;font-weight:600;color:var(--fg)}
+  .faq p{margin:10px 0 0;color:var(--soft);font-size:14.5px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brand">DeepPulse · 의뢰 안내</div>
+  <h1>15년차 DevOps 엔지니어가 직접 만드는<br/><b>웹사이트 · 관리 대시보드 · 크롤러</b>.</h1>
+  <p class="lede">기획·설계·개발·배포·운영을 한 사람이 책임집니다. 외주 재하청 없음, 코드와 인프라는 100% 인계.</p>
+
+  <h2>이런 일을 합니다</h2>
+  <section class="grid grid-3">
+    <div class="card">
+      <h3>웹사이트 구축</h3>
+      <p>브랜드/서비스 사이트, 랜딩페이지, 사내 포털. 반응형 + 기본 SEO + 도메인·SSL·배포까지.</p>
+      <div class="stack"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">SEO</span></div>
+    </div>
+    <div class="card">
+      <h3>기업용 관리 대시보드</h3>
+      <p>운영팀·CS·재무가 실제로 쓰는 어드민. 권한(RBAC)·감사로그·CSV/Excel 내보내기.</p>
+      <div class="stack"><span class="chip">Admin</span><span class="chip">Auth/RBAC</span><span class="chip">Charts</span></div>
+    </div>
+    <div class="card">
+      <h3>웹 크롤러 개발</h3>
+      <p>가격·뉴스·경쟁사 모니터링. 차단 우회·스케줄링·알림(Slack/메일) 일괄 구축.</p>
+      <div class="stack"><span class="chip">Playwright</span><span class="chip">Scheduler</span><span class="chip">Alert</span></div>
+    </div>
+  </section>
+
+  <h2>왜 DeepPulse인가</h2>
+  <section class="card why">
+    <ul>
+      <li><b>한 사람이 끝까지.</b> 기획·디자인·개발·DevOps 분리로 인한 커뮤니케이션 비용 0.</li>
+      <li><b>운영까지 포함.</b> 단순 납품이 아니라 도메인·SSL·모니터링·백업까지 셋업.</li>
+      <li><b>코드 100% 인계.</b> GitHub 레포·인프라 계정 모두 이관, 락인 없음.</li>
+      <li><b>15년차 시니어 엔지니어.</b> 대규모 트래픽·CI/CD·클라우드 운영 경험을 그대로 적용.</li>
+    </ul>
+  </section>
+
+  <h2>진행 절차</h2>
+  <table class="process">
+    <tr><td>STEP 1</td><td><b>문의 접수</b> — 이메일로 요구사항 개요 전달 (24시간 내 회신).</td></tr>
+    <tr><td>STEP 2</td><td><b>무료 상담</b> — 30~60분 미팅으로 범위·일정·예산 정렬.</td></tr>
+    <tr><td>STEP 3</td><td><b>견적·계약</b> — 범위·일정·금액·인계 조건을 문서로 확정.</td></tr>
+    <tr><td>STEP 4</td><td><b>개발·중간 데모</b> — 주 1회 진행 공유, 수정 즉시 반영.</td></tr>
+    <tr><td>STEP 5</td><td><b>배포·인계</b> — 운영 환경 셋업 후 코드·계정 인계, 1개월 무상 핫픽스.</td></tr>
+  </table>
+
+  <h2>예산 가이드</h2>
+  <p class="small" style="margin-top:0">실제 견적은 요구사항에 따라 달라집니다. 참고용 가이드입니다.</p>
+  <section class="price">
+    <div class="card">
+      <h3>웹사이트</h3>
+      <div class="amt">300만원~ <span>/ 2~4주</span></div>
+      <ul><li>랜딩 / 브랜드 사이트</li><li>반응형 + 기본 SEO</li><li>도메인·SSL·배포 포함</li></ul>
+    </div>
+    <div class="card">
+      <h3>관리 대시보드</h3>
+      <div class="amt">800만원~ <span>/ 4~8주</span></div>
+      <ul><li>인증·권한(RBAC)</li><li>주요 도메인 CRUD</li><li>리포트·내보내기</li></ul>
+    </div>
+    <div class="card">
+      <h3>크롤러</h3>
+      <div class="amt">200만원~ <span>/ 1~3주</span></div>
+      <ul><li>대상 사이트 분석</li><li>스케줄·알림 연동</li><li>운영 모니터링</li></ul>
+    </div>
+  </section>
+
+  <h2>자주 묻는 질문</h2>
+  <section class="faq">
+    <details><summary>비용 처리는 어떻게 하나요?</summary>
+      <p>개인사업자 등록 사업장으로, 현금영수증 발행이 가능합니다. 세금계산서가 필요한 거래는 사전에 협의해 주세요(과세 유형에 따라 발행 가능 여부가 달라질 수 있습니다).</p>
+    </details>
+    <details><summary>유지보수도 가능한가요?</summary>
+      <p>인계 후 1개월은 무상 핫픽스, 이후에는 월 단위 유지보수 계약 또는 시간 단가(MM) 방식 중 선택할 수 있습니다.</p>
+    </details>
+    <details><summary>NDA·보안이 중요한 프로젝트도 가능한가요?</summary>
+      <p>가능합니다. 표준 NDA 또는 클라이언트 양식 모두 수용하며, 코드·자격증명은 클라이언트 인프라 안에서만 관리합니다.</p>
+    </details>
+    <details><summary>해외/원격으로도 진행되나요?</summary>
+      <p>전 과정 원격 협업이 기본입니다. 필요 시 서울 권역 대면 미팅 가능.</p>
+    </details>
+  </section>
+
+  <h2>문의</h2>
+  <div class="cta">
+    <a class="btn btn-primary" href="mailto:root.studio.yaml@gmail.com?subject=%5BDeepPulse%5D%20%EC%9D%98%EB%A2%B0%20%EB%AC%B8%EC%9D%98">의뢰 문의 메일</a>
+    <a class="btn btn-ghost" href="https://www.youtube.com/@deeppulse">유튜브 채널</a>
+  </div>
+  <p class="small">root.studio.yaml@gmail.com · 평일 24시간 내 회신</p>
+
+  <hr/>
+
+  <h2 style="margin-top:0">사업자 정보</h2>
+  <section class="biz">
+    <dl>
+      <dt>상호</dt><dd>케이프로샵</dd>
+      <dt>대표자</dt><dd>고주호</dd>
+      <dt>사업자등록번호</dt><dd>104-37-62963</dd>
+      <dt>사업장 소재지</dt><dd>서울특별시 송파구 백제고분로23길 12, 301호</dd>
+      <dt>이메일</dt><dd>root.studio.yaml@gmail.com</dd>
+    </dl>
+  </section>
+
+  <p class="small">© DeepPulse. 본 페이지는 의뢰 안내용이며, 실제 계약은 별도 견적서·계약서로 진행됩니다.</p>
+</main>
+</body>
+</html>
